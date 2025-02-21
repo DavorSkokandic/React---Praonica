@@ -1,0 +1,75 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #2c3e50;
+    padding: 15px;
+  }
+  
+  .navbar-list {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-link {
+    color: white;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-link:hover {
+    color: #f39c12;
+  }
+  /* Navigacijska traka */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d1f2d;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .navbar-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-list li {
+    margin: 0 25px;
+    position: relative;
+  }
+  
+  .navbar-list a {
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navbar-list a:hover {
+    color: #f39c12;
+  }
+  
+  .navbar-list a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #f39c12;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .navbar-list a:hover::after {
+    width: 100%;
+  }
+  

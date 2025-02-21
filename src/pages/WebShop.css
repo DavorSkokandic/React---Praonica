@@ -1,0 +1,153 @@
+.shop-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.service-card {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 250px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.service-card button {
+  background-color: #0a3d62;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.service-card button:hover {
+  background-color: #3c6382;
+}
+
+.cart {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #f0f4f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item input {
+  width: 50px;
+  padding: 5px;
+}
+
+.checkout-btn {
+  background-color: #3c6382;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.checkout-btn:hover {
+  background-color: #0a3d62;
+}
+
+.login-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-section input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-section button {
+  background-color: #3c6382;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-section button:hover {
+  background-color: #0a3d62;
+}
+
+.login-fields {
+  margin: 20px 0;
+}
+
+.login-fields label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-fields input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin: 10px 0;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%;
+  }
+
+  .cart {
+    width: 100%;
+  }
+}

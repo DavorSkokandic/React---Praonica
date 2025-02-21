@@ -1,0 +1,114 @@
+/* Globalni stilovi */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f0f4f8;
+  overflow-x: hidden;
+}
+
+/* Kontejner za sve sekcije */
+.home-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: background-color 0.5s ease;
+}
+
+/* Sekcije */
+.section {
+  background: linear-gradient(135deg, #e0f4ff, #b3d9ff);
+  padding: 60px;
+  text-align: center;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section:hover {
+  background: linear-gradient(135deg, #b3d9ff, #e0f4ff);
+}
+
+.section h1 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.section p {
+  font-size: 1.125rem;
+  color: #004080;
+}
+
+/* Animacije i efekti */
+.section h1 {
+  transition: color 0.3s ease;
+}
+
+.section h1:hover {
+  color: #0056b3;
+}
+
+.section p {
+  transition: transform 0.3s ease;
+}
+
+.section p:hover {
+  transform: scale(1.05);
+}
+
+/* Media upiti */
+@media (max-width: 768px) {
+  .home-container {
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .section {
+    padding: 30px;
+    margin-bottom: 15px;
+  }
+
+  .section h1 {
+    font-size: 1.75rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  .section {
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+
+  .section h1 {
+    font-size: 1.5rem;
+  }
+
+  .section p {
+    font-size: 0.875rem;
+  }
+}

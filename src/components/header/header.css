@@ -1,0 +1,234 @@
+/* Globalna podešavanja */
+:root {
+  font-size: 16px; /* 1rem = 16px */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #1e272e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem; /* Koristi rem za padding */
+  z-index: 1000;
+  box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Logo */
+.logo h1 {
+  font-size: 1.75rem; /* Relativna veličina */
+  color: #fff;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Košarica */
+.cart-icon {
+  font-size: 1.5rem; /* Ikona košarice */
+  color: #fff;
+  margin-left: auto;
+  margin-right: 1.25rem; /* Razmak između ikone i desnog ruba */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #1e272e;
+  cursor: pointer;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.cart-count {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  background-color: red;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.75rem;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Hamburger meni */
+.menu-icon {
+  display: none;
+  width: 2rem;
+  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  z-index: 1050;
+}
+
+.menu-icon div {
+  background-color: #fff;
+  height: 0.25rem;
+  margin: 0.25rem 0;
+  border-radius: 0.125rem;
+  transition: all 0.3s ease;
+}
+
+.menu-icon.open div:nth-child(1) {
+  transform: translateY(0.625rem) rotate(45deg);
+}
+
+.menu-icon.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open div:nth-child(3) {
+  transform: translateY(-0.625rem) rotate(-45deg);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav-items {
+  display: flex;
+  list-style: none;
+}
+
+.nav-items li {
+  margin: 0 1.25rem; /* Razmak između navigacijskih stavki */
+}
+
+.nav-items button,
+.nav-items a {
+  font-size: 1.125rem;
+  background: none;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-items button:hover,
+.nav-items a:hover {
+  color: #00a8ff;
+}
+
+/* Hamburger meni kad je otvoren */
+.navbar.open {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+  transition: all 0.3s ease;
+}
+
+/* Navigacijski linkovi u vertikalnom rasporedu */
+.nav-items.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-items.open li {
+  margin-bottom: 2rem;
+}
+
+/* Zatvaranje menija (X ikona) */
+.close-icon {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1200;
+}
+
+/* Responsive */
+@media (max-width: 48rem) {
+  .cart-icon {
+    display: flex;
+    position: relative;
+    top: 1rem;
+    left: 0rem; /* Košarica uz hamburger meni u mobilnom prikazu */
+    margin-left: 0;
+  }
+
+  .menu-icon {
+    display: block;
+    width: 2rem;
+    height: 1.5rem;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    z-index: 1050;
+  }
+  
+  .navbar {
+    display: none;
+  }
+
+  .navbar.open {
+    display: flex;
+  }
+  
+  .menu-icon {
+    display: block;
+  }
+  
+  .menu-icon div {
+    background-color: #fff;
+    height: 0.25rem;
+    margin: 0.25rem 0;
+    border-radius: 0.125rem;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-icon.open div:nth-child(1) {
+    transform: translateY(0.625rem) rotate(45deg);
+  }
+  
+  .menu-icon.open div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-icon.open div:nth-child(3) {
+    transform: translateY(-0.625rem) rotate(-45deg);
+  }
+}
